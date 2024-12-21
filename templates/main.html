@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Page</title>
+    <link rel="stylesheet" href="static/style/style.css">
+    <link rel="stylesheet" href="static/style/styleMain.css">
+</head>
+
+
+<div class="bg-deux">
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="/">
+                    <h1>StreamZone</h1>
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="margin-top10 margin-bottom10 animated-title">Recommended films</h1>
+            <div class="container-film" id="recommendations">
+                <!-- Les films seront ajoutés ici dynamiquement grace au script scriptRecmmendation, Only 5 movies -->
+            </div>
+
+            <script src="static/scripts/scriptFilmCategory.js"></script>
+
+            <!-- Pop-up descriptif (modale) -->
+            <div id="movie-popup" class="popup hidden">
+                <div class="popup-content">
+                    <span id="close-popup" class="close-btn">&times;</span>
+                    <h2 id="popup-title">Titre du film</h2>
+                    <div class="content-horizontal">
+                        <img id="popup-image" src="static/ressources/R.jpg" alt="Affiche du film">
+                        <div class="content-vertical">
+                            <p id="popup-description">Description du film ici...</p>
+                            <div class="margin-top10">
+                                <button id="popup-button" class="button">Watch</button>
+                                <button id="popup-button" class="button">Read</button>
+                                <button id="popup-button-fav" class="button">Add favorites</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer>
+            <!-- Footer content -->
+        </footer>
+    </body>
+</div>
+<script src="static/scripts/scriptRecommendation.js"></script>
+<script src="static/scripts/scriptPopup.js"></script>
+</html>

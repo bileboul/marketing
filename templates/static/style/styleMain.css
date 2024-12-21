@@ -1,0 +1,344 @@
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.7); /* Fond noir transparent */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo h1 {
+    font-size: 1.8rem;
+    color: #FFD700;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navigation bar */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700; /* Change vers le jaune au survol */
+}
+
+h2{
+    color: #FFD700;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3{
+    color: #FFD700;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+div h3{
+  color: #FFD700;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0px;
+}
+
+
+.margin-top10{
+    margin-top: 10px;
+}
+
+.margin-bottom10{
+    margin-bottom: 10px;
+}
+
+.logo a {
+  text-decoration: none; /* Supprime la ligne de soulignement */
+  color: inherit;        /* Hérite de la couleur actuelle */
+  transition: all 0.3s;  /* Animation fluide de 0.3 seconde */
+}
+
+.content-horizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+/* ---------- title ---------- */
+
+.animated-title {
+    font-family: 'Arial', sans-serif; /* Police moderne */
+    font-size: 3rem; /* Taille du texte */
+    text-align: center; /* Centrer le titre */
+    background: linear-gradient(-45deg, #ab9d0b, #d5de2c, #e2c623, #f0fe8a);
+    background-size: 400% 400%; /* Étendre le gradient pour un effet d’animation */
+    -webkit-background-clip: text; /* Applique le dégradé au texte */
+    -webkit-text-fill-color: transparent; /* Rend le fond transparent, laissant apparaître le gradient */
+    animation: gradient-animation 6s ease infinite; /* Animation continue */
+    margin: 20px 0; /* Espacement au-dessus et au-dessous */
+    font-weight: bold; /* Style gras pour un impact visuel */
+}
+
+/* Animation pour déplacer le gradient */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+/* ---------- Carousel ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #100721;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+}
+
+.container-film {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  gap: 10px;
+  margin-top: 40px;
+}
+.container-film > div {
+  flex: 0 0 120px;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 1px 5px 15px #393939;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+.container-film > div:nth-of-type(1) {
+  background: url("/static/ressources/imagetest.jpg") no-repeat 50%/cover;
+}
+.container-film > div:nth-of-type(2) {
+  background: url("/static/ressources/imagetest.jpg") no-repeat 50%/cover;
+}
+.container-film > div:nth-of-type(3) {
+  background: url("/static/ressources/imagetest.jpg") no-repeat 50%/cover;
+}
+.container-film > div:nth-of-type(4) {
+  background: url("/static/ressources/imagetest.jpg") no-repeat 50%/cover;
+}
+.container-film > div:nth-of-type(5) {
+  background: url("/static/ressources/imagetest.jpg") no-repeat 50%/cover;
+}
+
+.container-film > div .content {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  opacity: 0;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  background: #02022e;
+  background: linear-gradient(0deg, rgba(2, 2, 46, 0.6755077031) 0%, rgba(255, 255, 255, 0) 100%);
+  transform: translatey(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+  visibility: hidden;
+}
+.container-film > div .content span {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+.container-film > div:hover {
+  flex: 0 0 200px;
+  box-shadow: 1px 3px 15px #c7d845;
+  transform: translatey(-10px);
+}
+.container-film > div:hover .content {
+  opacity: 1;
+  transform: translatey(0%);
+  visibility: visible;
+}
+
+.film-item{
+  cursor: pointer;
+}
+
+
+/* ---------- slider-film ---------- */
+
+.slider-film {
+  margin: 30px auto;
+  padding: 20px;
+  width: 90vw;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider-title {
+  color: #FFD700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.slider-track {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-track div {
+  width: 200px;
+  margin: 0 10px;
+  background-color: #333;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-track div img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FFD700;
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-btn:hover {
+  background: #FFA726;
+  transform: translateY(-50%);
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+/* ---------- pop-up ---------- */
+
+/* Styles pour le pop-up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  max-height: 500px;
+  width: 90%;
+}
+
+.popup img {
+  max-width: 30%;
+  border-radius: 10px;
+}
+
+.popup .close-btn {
+  position: relative;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Afficher le pop-up */
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Masquer le pop-up */
+.popup.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
