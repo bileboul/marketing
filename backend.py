@@ -45,6 +45,7 @@ def get_recommendation():
             genre_counts[genre] = genre_counts.get(genre, 0) + 1
 
     top_genres = sorted(genre_counts, key=genre_counts.get, reverse=True)[:2]
+    print("top genres :", top_genres)
     if not top_genres:
         return jsonify([])
 
