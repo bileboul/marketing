@@ -5,7 +5,7 @@
 
 ## Étapes
 1. **Cloner projet (GitHub) :**
-   - git clone 
+   - git clone https://github.com/bileboul/marketing.git
 
 2. **Installer les dépendances Python :**
    - Ouvrez un terminal dans le dossier du projet.
@@ -18,7 +18,7 @@
    Python backend.py
     
 
-5. **Accéder au site web :**
+4. **Accéder au site web :**
    - Ouvrez un navigateur et allez à `http://localhost:5000` (ou une autre adresse indiquée par le serveur).
 
 ## Structure du projet
